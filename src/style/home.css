@@ -1,0 +1,37 @@
+.line-div{
+    width: 90%;
+    margin: auto;
+  }
+
+  .meetup-main{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 100px;
+  }
+
+  .meetup-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .heading{
+    font-weight: 600;
+    font-size: 30px;
+  }
+
+  .meetup-cards-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 7rem;
+  }
+
+  .meetup-cards-container a{
+    text-decoration: none;
+    color: black;
+  }
