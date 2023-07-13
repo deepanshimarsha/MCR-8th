@@ -6,8 +6,8 @@ const MeetupContext = createContext(null);
 const MeetupContextProvider = ({ children }) => {
   const [meetups, setMeetups] = useState(data.meetups);
 
-  const arr = data.meetups.map(({ id }) => ({ id, rspv: false }));
-  const [RSPVList, setRSPVList] = useState(arr);
+  // const arr = data.meetups.map(({ id }) => ({ id, rspv: false }));
+  const [RSPVList, setRSPVList] = useState();
   return (
     <MeetupContext.Provider
       value={{ meetups, setMeetups, RSPVList, setRSPVList }}

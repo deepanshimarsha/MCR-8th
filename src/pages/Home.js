@@ -9,6 +9,7 @@ import Card from "../component/Card/Card";
 
 export default function Home() {
   const { meetups, setMeetups } = useMeetupContext();
+  console.log(meetups);
   return (
     <div>
       <TopNavbar />

@@ -34,11 +34,23 @@ export default function TopNavbar() {
             />
             <Button
               variant="outline-success"
-              onClick={setMeetups(
-                data.meetups.filter(({ title, eventTags }) =>
-                  title.includes(input)
-                )
-              )}
+              onClick={() => {
+                if (!input) {
+                  setMeetups(data.meetups);
+                } else {
+                  setMeetups(
+                    data.meetups.filter(
+                      ({ title, eventTags }) =>
+                        title.toLowerCase().includes(input.toLowerCase()) ||
+                        eventTags.reduce(
+                          (acc, curr) =>
+                            curr.toLowerCase().includes(input) ? true : false,
+                          false
+                        )
+                    )
+                  );
+                }
+              }}
             >
               Search
             </Button>
